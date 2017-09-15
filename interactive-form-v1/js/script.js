@@ -142,7 +142,7 @@ $(function() {
   // - Letters only
   // - Between 3 and 30 letters long
   function validateName() {
-    return (/^[a-zA-Z]{3,30}$/.test($("#name").val())) ? true : false;
+    return (/^[a-zA-Z.\s]{3,30}$/.test($("#name").val())) ? true : false;
   }
 
   // Function to validate email:
