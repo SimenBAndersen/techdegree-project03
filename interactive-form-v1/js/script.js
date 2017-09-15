@@ -74,7 +74,7 @@ $(function() {
   });
 
   // Hide the color options
-  $("#color").prop("disabled", true);
+  $("#color").addClass("is-hidden").parent().addClass("is-hidden");
 
   // Change the T-shirt color option based on the chosen Design
   $("select[name='user_design']").on("change", function(event) {
@@ -82,20 +82,20 @@ $(function() {
     // If the JS Puns design is chosen:
     // - Show the JS Puns t-shirts & Hide the Heart JS t-shirts
     if (event.target.value === "js puns") {
-      $("#color").prop("disabled", false);
+      $("#color").removeClass("is-hidden").parent().removeClass("is-hidden");
       $("#color option").hide();
       $("#color option:contains('JS Puns')").show();
     }
     // If the JS Puns design is chosen:
     // - Hide the JS Puns t-shirts & Show the Heart JS t-shirts
     else if (event.target.value === "heart js") {
-      $("#color").prop("disabled", false);
+      $("#color").removeClass("is-hidden").parent().removeClass("is-hidden");
       $("#color option").hide();
       $("#color option:contains('JS shirt')").show();
     }
     // If "select theme"/none is chosen: show none
     else {
-      $("#color").prop("disabled", true);
+      $("#color").addClass("is-hidden").parent().addClass("is-hidden");
     }
   });
 
