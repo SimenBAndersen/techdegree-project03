@@ -6,6 +6,10 @@ $(function() {
   const $EXPRESS = $("input[name='express']");
   const $NODE = $("input[name='node']");
 
+  // Hide the job title text field until it is chosen in the dropdown menu
+  $("#other-title").addClass("is-hidden");
+  $("label[for='other-title']").addClass("is-hidden");
+
   // Hide the payment options to be later displayed when one is chosen
   $("#credit-card").hide();
   $("#paypal").hide();
